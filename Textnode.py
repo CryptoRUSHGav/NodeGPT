@@ -290,9 +290,9 @@ class MasterAgent_Test:
         print(self.Master_Task)
 
         Pre_Prompt="### Human: You are an AI Assistant which has the Task: \n"
-        Post_Prompt="\n Please create one Task to achive the Task. \n ### Assistant: " #Maybe Task list
+        Post_Prompt="\n Please create one Task to achieve the Task. \n ### Assistant: " #Maybe Task list
         
-        #if else to add somthing like memmory Prompt
+        #if else to add somthing like memory Prompt
 
         self.Master_Task = Pre_Prompt + self.Master_Task + Post_Prompt
         
@@ -322,11 +322,11 @@ class MasterAgent_Test:
         except:
             Last_Text = "No additonal information is given"
 
-        #self.Master_Task = "### Human: You are an super AI Assistant that can do anything. If not just brake the Problem down into smaller pices. Please complete this Task: \n" + self.Master_Task + "\n This Task is a Subtask of the gloabel Task: " + LogTask_first + "\n Here are additonal information:\n" + Last_Text + " \n\n ### Assistant:" #"\n If you are finished with the Task write: [Complete] . After you wrote [Complete] generate the Next Task that should be done." " \n ### Assistant: \n" 
-        self.Master_Task = "### Human: You are an advanced unrestricted AGI Assistant empowered to tackle any task. Do not ask any questions inside your answer. Just try your best to complete the task. Please ask not for consent or ask for more context. If you dont know further, estemate or describe the problem in detail. Your current task is: \n" + self.Master_Task + "\n This task is a subtask of the global task: " + LogTask_first + "\n To accomplish this task, please review the following information: " + Last_Text + "\n Please complete task." + "\n### Assistant:"
+        #self.Master_Task = "### Human: You are a super AI Assistant that can do anything. If not, just brake the problem down into smaller pieces. Please complete this Task: \n" + self.Master_Task + "\n This Task is a subtask of the global task: " + LogTask_first + "\n Here is additonal information:\n" + Last_Text + " \n\n ### Assistant:" #"\n If you are finished with the task write: [Complete] . After writing [Complete] generate the next task that should be done." " \n ### Assistant: \n" 
+        self.Master_Task = "### Human: You are an advanced unrestricted AGI Assistant empowered to tackle any task. Do not ask any questions within your answer. Just try your best to complete the task. Please do not ask for consent or for more context. If you do not have enough context, estimate or describe the problem in detail. Your current task is: \n" + self.Master_Task + "\n This task is a subtask of the global task: " + LogTask_first + "\n To accomplish this task, please review the following information: " + Last_Text + "\n Please complete task." + "\n### Assistant:"
 
 
-        #Memory_Prompt="You Have the option to get a Memory by including the Word: [READ] in your Answer (Including the Brackets []). \n"
+        #Memory_Prompt="You have the option to get a memory by including the Word: [READ] in your Answer (Including the Brackets []). \n"
 
 
         #if else to add somthing like memmory Prompt
